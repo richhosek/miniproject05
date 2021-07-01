@@ -13,7 +13,7 @@ $("#submit-button").on("click", function(event) {
         projectNameInput.val(), 
         projectTypeSelect.val(),
         hourlyRate,
-        dueDateInput.val(),
+        moment(dueDateInput.val()).format("MMMM Do, YYYY"),
         daysLeft,
         daysLeft * 8 * hourlyRate
     );
@@ -30,10 +30,10 @@ function displayProject(name, type, rate, date, daysLeft, earnings) {
         .append(
             $("<td>").text(name),
             $("<td>").text(type),
-            $("<td>").text(rate),
+            $("<td>").text("$" + rate.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})),
             $("<td>").text(date),
             $("<td>").text(daysLeft),
-            $("<td>").text(earnings),
+            $("<td>").text("$" + earnings.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})),
             $("<td>").append($("<button>").addClass("btn btn-danger delete").html("<i class='bi bi-trash'></i> Delete"))
         )
     );
@@ -43,3 +43,10 @@ function displayProject(name, type, rate, date, daysLeft, earnings) {
 $("#project-list").on("click", ".delete", function(event){
     $(event.target).parent().parent().remove();
 })
+
+// set up clock
+setInterval(function() {
+    const now = moment();
+    $("#date").text(now.format("MMMM Do, YYYY"));
+    $("#time").text(now.format("HH:mm:ss"))
+}, 1000)

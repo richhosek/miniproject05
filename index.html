@@ -8,6 +8,16 @@
     <title>Project Tracker</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+<style>
+    #time, #date {
+        font-family: 'Major Mono Display', monospace;
+        font-weight: bold;
+        color: purple
+    }
+</style>
 </head>
 
 <body>
@@ -16,6 +26,7 @@
             <header class="jumbotron col-9 h-100 bg-warning mb-0">
                 <h1><i class="bi bi-kanban"></i> Project Tracker</h1>
                 <p>Create and track projects and how much money you can make by working on them.</p>
+                <p><span id="date"></span> - <span id="time"></span></p>
             </header>
 
             <div class="card col-3" style="width: 18rem;">
