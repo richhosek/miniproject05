@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="jumbotron">
+        <h1>Project Tracker</h1>
+    </header>
+
+    <div>
+        Fill out the form with the project name, type, rate and due date.
+    </div>
+
+    <div>
+        <form>
+            <input placeholder="project name" type="text" id="project-name"><br>
+            <select name="" id="project-type">
+                <option value="">Front End</option>
+                <option value="">Back End</option>
+                <option value="">Design</option>
+                <option value="">Data</option>
+            </select><br>
+            <input placeholder="hourly rate" type="number" id="hourly-rate"><br>
+            <input type="date" id="due-date"><br>
+            <button id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Project Name</td>
+                <td>Type</td>
+                <td>Rate</td>
+                <td>Due Date</td>
+                <td>Days Till Due</td>
+                <td>Potential Earnings</td>
+            </tr>
+        </thead>
+        <tbody id="project-list">
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
