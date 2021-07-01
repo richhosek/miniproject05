@@ -7,20 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Tracker</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <main class="container">
         <div class=row>
-            <header class="jumbotron col-9 h-100">
-                <h1>Project Tracker</h1>
+            <header class="jumbotron col-9 h-100 bg-warning mb-0">
+                <h1><i class="bi bi-kanban"></i> Project Tracker</h1>
+                <p>Create and track projects and how much money you can make by working on them.</p>
             </header>
 
             <div class="card col-3" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Project Tracker Instructions</h5>
                     <p class="card-text">Fill out the form with the project name, type, rate and due date.</p>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#new-project">Add Project</button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#new-project"><i class="bi bi-plus-circle"></i> Add Project</button>
                 </div>
             </div>
         </div>
